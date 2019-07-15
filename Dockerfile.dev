@@ -6,4 +6,3 @@ COPY . /express-dev
 RUN npm install
 
 ENV PATH="/express-dev/node_modules/.bin:${PATH}"
-CMD /bin/sh -c 'inode index.js'
