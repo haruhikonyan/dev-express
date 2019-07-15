@@ -1,0 +1,9 @@
+FROM node:latest
+ENV LANG C.UTF-8
+
+WORKDIR /express-dev
+COPY . /express-dev
+RUN npm install
+
+ENV PATH="/express-dev/node_modules/.bin:${PATH}"
+CMD /bin/sh -c 'inode index.js'
