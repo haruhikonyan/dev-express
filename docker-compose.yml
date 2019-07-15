@@ -4,7 +4,7 @@ services:
     stdin_open: true
     build:
       context: .
-      dockerfile: Dockerfile.dev
+      dockerfile: Dockerfile.app.dev
     volumes:
       - ./:/express-dev
       - node-modules-data:/express-dev/node_modules
@@ -12,5 +12,11 @@ services:
     ports:
       - 8080:8080
     working_dir: /express-dev
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx.dev
+    ports: 
+      - 80:80
 volumes:
   node-modules-data:
