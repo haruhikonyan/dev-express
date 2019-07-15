@@ -4,10 +4,11 @@
   "description": "development express for docker",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-dev": "^4.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node-dev src/app.js"
   }
 }
